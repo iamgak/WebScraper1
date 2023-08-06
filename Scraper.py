@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests, re
-url="https://allduniv.ac.in/contact_us"
+url="https://xyz.com"
 #url="https://www.usps.com/help/contact-us.htm"
 page=requests.get(url)
 soup=BeautifulSoup(page.content, "html.parser")
