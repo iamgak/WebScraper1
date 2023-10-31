@@ -5,7 +5,7 @@ url="https://xyz.com"
 page=requests.get(url)
 soup=BeautifulSoup(page.content, "html.parser")
 #print(soup.find_all("section-block pages bg-gray"))
-p_element = soup.find(string=re.compile("[0-9]-([0-9]{3}-){2}[0-9{3,}", re.IGNORECASE))
+p_element = soup.find(string=re.compile("([0-9]-([0-9]{3}-){2}[0-9{3,}|[0-9]{10})", re.IGNORECASE))
 print(p_element.parent.parent)
 #ext=str(soup.prettify())
 #rint(text)
